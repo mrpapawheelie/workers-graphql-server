@@ -1,14 +1,14 @@
 const { RESTDataSource } = require('apollo-datasource-rest')
 
-class PokemonAPI extends RESTDataSource {
+class CoinGeckoAPI extends RESTDataSource {
   constructor() {
     super()
-    this.baseURL = 'https://pokeapi.co/api/v2/'
+    this.baseURL = 'https://api.coingecko.com/api/v3/'
   }
 
-  async getPokemon(id) {
-    return this.get(`pokemon/${id}`)
+  async getCoin(id) {
+    return this.get(`coin/${id}`)
   }
 }
 
-module.exports = PokemonAPI
+module.exports = CoinGeckoAPI
