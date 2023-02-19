@@ -2,7 +2,7 @@ const { ApolloServer } = require('apollo-server-cloudflare');
 const { graphqlCloudflare } = require('apollo-server-cloudflare/dist/cloudflareApollo');
 
 const KVCache = require('../kv-cache');
-const CoinAPI = require('../datasources/coingecko');
+const CoinAPI = require('../datasources/coingeckoapi');
 const resolvers = require('../resolvers');
 const typeDefs = require('../schema');
 
